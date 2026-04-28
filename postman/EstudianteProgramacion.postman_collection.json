@@ -1,0 +1,287 @@
+{
+  "info": {
+    "_postman_id": "3dd1eb27-6ec9-4612-b3c0-5d13d874e5ad",
+    "name": "EstudianteProgramacion",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53690385",
+    "_collection_link": "https://go.postman.co/collection/53690385-3dd1eb27-6ec9-4612-b3c0-5d13d874e5ad?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "AccionesTema",
+      "item": [
+        {
+          "name": "CrearTema",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"SpringBoot\",\r\n    \"descripcion\": \"Esta es una descripción\",\r\n    \"cursoId\": 3\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/estudiante/temas",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estudiante",
+                "temas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TraerTema",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/estudiante/temas/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estudiante",
+                "temas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TraerTemas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/estudiante/temas",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estudiante",
+                "temas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ActualizarTema",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cursoId\": 2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/estudiante/temas/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estudiante",
+                "temas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "EliminarTema",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/estudiante/temas/2",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estudiante",
+                "temas",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AccionesCurso",
+      "item": [
+        {
+          "name": "CrearCurso",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Python básico\",\r\n    \"modalidad\": \"Online\",\r\n    \"fechaFinalizacion\": \"2023-12-31\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/estudiante/cursos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estudiante",
+                "cursos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TraerCursos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/estudiante/cursos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estudiante",
+                "cursos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TraerCursoPorNombre",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/estudiante/cursos?nombre=python",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estudiante",
+                "cursos"
+              ],
+              "query": [
+                {
+                  "key": "nombre",
+                  "value": "python"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TraerCurso",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/estudiante/cursos/2",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estudiante",
+                "cursos",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ActualizarCurso",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre\": \"Java Principiante\",\r\n    \"listaTemas\": [{\r\n        \"idTema\": 1\r\n    },\r\n    {\r\n        \"idTema\": 2\r\n    }]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/estudiante/cursos/2",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estudiante",
+                "cursos",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "EliminarCurso",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/estudiante/cursos/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estudiante",
+                "cursos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TraerTemasPorCurso",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/estudiante/cursos/2/temas",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "estudiante",
+                "cursos",
+                "2",
+                "temas"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
